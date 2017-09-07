@@ -13,7 +13,7 @@ export const profileUpdate = (profile) => ({
 export const profileCreateRequest = (profile) => (dispatch, getState) => {
   let {auth} = getState();
   return superagent.post(`${__API_URL__}/profiles`)
-  .set('Authroization', `Bearer ${auth}`)
+  .set('Authorization', `Bearer ${auth}`)
   .field('bio', profile.bio)
   .attach('avatar', profile.avatar)
   .then( res => {

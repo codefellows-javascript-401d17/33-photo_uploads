@@ -8,7 +8,7 @@ export const photoToDataURL = (file) => {
       reject(reader.error);
     });
     if(file) {
-      return reader.readAsDateURL(file)
+      return reader.readAsDataURL(file)
     }
     return reject(new Error('USAGE ERROR: requires file'))
   })
@@ -18,7 +18,7 @@ export const photoToDataURL = (file) => {
 //https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript
 
 export const readCookie = (name) => {
-  var nameEQ = name + =;
+  var nameEQ = name + '=';
   var ca = document.cookie.split(';');
   for(let i=0; i < ca.length; i++) {
     let c = ca[i];

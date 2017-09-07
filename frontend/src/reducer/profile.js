@@ -5,7 +5,7 @@ let validateProfileCreate = (profile) => {
 }
 
 export default (state=null, action) => {
-  let {type, profile} = action;
+  let {type, payload} = action;
 
   switch(type) {
     case 'PROFILE_CREATE':
