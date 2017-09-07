@@ -1,15 +1,17 @@
-![cf](https://i.imgur.com/7v5ASc8.png) 33: Photo Uploads
+![cf](https://i.imgur.com/7v5ASc8.png) 32: Authentication and Authorization
 ======
 
 ## Submission Instructions
-* continue working on the fork you created from lab 32
-* open a **new branch** for today's assignment
-* upon completion, create a **new pull request** in github
+* fork this repository & create a new branch for your work
+* write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
+* push to your repository
+* submit a pull request to this repository
 * submit a link to your PR in canvas
+* write a question and observation on canvas
 
 ## Learning Objectives
-* students will be able to upload images (and other assets) on the client side
-* students will be able to use the `FileReader` API to preview files
+* students will be able to manage basic and bearer auth on the client side
+* students will learn to manage cookies on the client side
 
 ## Requirements
 #### Configuration
@@ -37,11 +39,11 @@
   * `_content.scss`
 
 #### Feature Tasks
-* create a `SettingsContainer`
-  * give the user the ability to create and update their profile
-* **optional:** create a `DashboardContainer`
-  * give the user the ability to create, read, update and delete photos as part of their photo gallery
+* create a simple front end for your cf-gram (or comparable) API
+* create a landing page that enables a user to signup and signin
+  * redirect the user to the dashboard page on signup or signin
+  * store the users token in `localStorage` on signin
 
 #### Test
 * test your redux reducers
-* test your `util` methods
+* **optional:** test your `util` methods
