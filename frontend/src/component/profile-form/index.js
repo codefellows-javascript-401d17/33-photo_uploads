@@ -66,4 +66,4 @@ class ProfileForm extends React.Component {
   }
 }
 
-export default ProfileForm
+export default ProfileForm;
