@@ -4,7 +4,7 @@ import AuthForm from '../auth-form';
 import * as util from '../../lib/util.js';
 import {signupRequest, loginRequest} from '../../action/auth-actions.js';
 
-class Landing extends React.Component {
+class LandingContainer extends React.Component {
   render() {
     let {params} = this.props.match;
 
@@ -30,4 +30,4 @@ let mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(undefined, mapDispatchToProps)(Landing)
+export default connect(undefined, mapDispatchToProps)(LandingContainer);
