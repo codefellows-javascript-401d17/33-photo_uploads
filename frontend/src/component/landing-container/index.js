@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import AuthForm from '../auth-form';
 import * as util from '../../lib/util.js';
+import {signupRequest, loginRequest} from '../../action/auth-actions.js';
 
 class LandingContainer extends React.Component {
   render() {

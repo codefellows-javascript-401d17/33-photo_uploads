@@ -3,10 +3,18 @@ import {Provider} from 'react-redux';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import appStoreCreate from '../../lib/app-create-store.js';
 import LandingContainer from '../landing-container';
-
-let store = appStoreCreate();
+import SettingsContainer from '../settings-container';
+import * as util form '../../lib/util.js';
+import {tokenSet} from '../../action/auth-actions.js';
 
 class App extends React.Component {
+  componentDidMount() {
+    let token = util.readCookie('X-Sluggram-Token');
+    if(token) {
+      this.props.tokenSet(token);
+    }
+  }
+
   render() {
     return (
       <div className='cfgram'>
@@ -31,4 +39,12 @@ class App extends React.Component {
   }
 }
 
-export default App;
+let mapStateToProps = (state) => ({
+  profile: state.profile
+})
+
+let mapDispatchToProps = (dispatch) => ({
+  tokenSet: (token) => dispatch(tokenSet(token))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
