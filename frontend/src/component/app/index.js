@@ -1,9 +1,10 @@
 import React from 'react';
-import {Provider} from 'react-redux';
+import {connect} from 'react-redux';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
-import appStoreCreate from '../../lib/app-create-store.js';
+
 import LandingContainer from '../landing-container';
 import SettingsContainer from '../settings-container';
+
 import * as util form '../../lib/util.js';
 import {tokenSet} from '../../action/auth-actions.js';
 
@@ -27,10 +28,12 @@ class App extends React.Component {
                   <ul>
                     <li><Link to='/welcome/signup'>signup</Link></li>
                     <li><Link to='/welcome/login'>login</Link></li>
+                    <li><Link to='/settings'</Link></li>
                   </ul>
                 </nav>
               </header>
-              <Route path='/welcom/:auth' component={LandingContainer} />
+              <Route exact path='/welcome/:auth' component={LandingContainer} />
+              <Route exact path='/settings' component={SettingsContainer} />
             </section>
           </BrowserRouter>
         </Provider>
