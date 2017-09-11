@@ -57,7 +57,7 @@ class ProfileForm extends React.Component {
         <textarea
           type='text'
           name='bio'
-          value={this.state.value}
+          value={this.state.bio}
           onChange={this.handleChange}>
         </textarea>
 
